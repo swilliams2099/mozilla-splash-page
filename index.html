@@ -117,21 +117,27 @@
       <div class="further-info">
         <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
+          <!-- TODO make responsive with srcset, sizes? BUT seems to work without them... -->
+             <!-- In each case (except one — which one is inherently responsive?) 
+              we want the browser to serve the 120px wide version when the viewport width is 
+              500px wide or less, or the 400px wide version otherwise. -->
           <img 
+            srcset="firefox_logo-only_RGB_120w.png 120w, firefox_logo-only_RGB_400w.png 400w"
+            sizes="(max-width: 500px) 120px, 400px" 
             src="firefox_logo-only_RGB_400w.png"
-            alt="Firefox logo" />
-            <!-- TODO make responsive with srcset, sizes? BUT seems to work without them... -->
-            <!-- srcset="firefox_logo-only_RGB_120w.png 120w, firefox_logo-only_RGB_400w.png 400w"
-            sizes="(max-width: 120px) 120px, 400px" 
-            -->
+            alt="Firefox logo" >
         </a>
         <a href="https://www.mozilla.org/">
           <img
+            srcset="mozilla-dinosaur-head_120w.png 120w, mozilla-dinosaur-head_400w.png, 400w"
+            sizes="(max-width: 500px) 120px, 400px"
             src="mozilla-dinosaur-head_400w.png"
             alt="Mozilla dinosaur head">
         </a>
         <a href="https://addons.mozilla.org/">
           <img
+            srcset="firefox-addons_120w.jpg 120w, firefox-addons.jpg, 400w"
+            sizes="(max-width: 500px) 120px, 400px"
             src="firefox-addons.jpg"
             alt="Add-ons logo">
         </a>
